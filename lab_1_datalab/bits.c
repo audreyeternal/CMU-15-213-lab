@@ -125,7 +125,11 @@ extern int printf(const char *, ...);
  *   Rating: 2
  */
 long copyLSB(long x) {
-    return 2;
+    long result = 1L;
+    result &= x;
+    result = (result<<63);
+    result = (result>>63);
+    return result;
 }
 /*
  * allOddBits - return 1 if all odd-numbered bits in word set to 1

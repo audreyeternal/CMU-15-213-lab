@@ -49,7 +49,6 @@ clean:
 # Include rules for submit, format, etc
 FORMAT_FILES = bits.c
 HANDIN_FILES = bits.c
-include helper.mk
 
 # Add check-format dependencies
 submit: | check-format
